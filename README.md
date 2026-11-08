@@ -30,8 +30,6 @@ Personal_Page/
 ├── data.json        # 存放個人資訊、經歷與作品集的結構化資料檔
 ├── assets/          # 存放圖片與相關靜態資源
 │   ├── handsome.png
-│   ├── UrbanFragments.JPG
-│   └── sdgs.jpg
 └── README.md        # 專案說明文件
 ```
 
