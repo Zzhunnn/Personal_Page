@@ -18,6 +18,21 @@ nav a{margin-left:12px;color:var(--muted);text-decoration:none}
 .en-name{display:block;margin-top:0;color:var(--muted);font-size:0.95rem;letter-spacing:0.06em}
 .contacts{display:flex;flex-direction:row;gap:4px;align-items:center;margin:0}
 section{margin-top:14px}
+.load-profile-wrap{text-align:center;margin:20px 0 24px}
+.load-profile-button{
+    background:linear-gradient(180deg,var(--accent-soft),#92a3ee);
+    color:#fff;
+    border-radius:999px;
+    padding:6px 12px;
+    min-width:48px;
+    justify-content:center;
+    font-weight:600;
+    font-size:0.92rem;
+    box-shadow:0 5px 14px rgba(8,14,30,0.05);
+    border:1px solid rgba(255,255,255,0.06);
+    cursor:pointer;
+}
+.load-profile-button:hover{background:linear-gradient(180deg,#5f73c6,#7f8fe0);box-shadow:0 10px 26px rgba(8,14,30,0.08)}
 .skills-list{margin-bottom:10px}
 .skill{margin-bottom:14px}
 .bar{background:#e6eef8;border-radius:8px;height:10px;overflow:hidden}
