@@ -1,0 +1,40 @@
+{
+  "skills": [
+    {"name": "攝影", "color": "green", "weight": 64},
+    {"name": "領導 / 企劃", "color": "blue", "weight": 65},
+    {"name": "剪輯", "color": "green", "weight": 63},
+    {"name": "資訊", "color": "orange", "weight": 64},
+    {"name": "演講", "color": "blue", "weight": 63}
+  ],
+  "timeline": [
+    {
+      "year": "2020",
+      "period": "國中",
+      "role": "班長",
+      "desc": "擔任班長兩年，負責領導及處理班級事務，積極處理班級大小事，促進班級運作順利。"
+    },
+    {
+      "year": "2022",
+      "period": "高中一年級",
+      "role": "班聯會成員",
+      "desc": "作為與學校的溝通橋樑並討論政策，參與各項校內外活動，提升團隊合作與企劃等能力。"
+    },
+    {
+      "year": "2023",
+      "period": "高中二年級",
+      "role": "攝影社公關、活動、網管",
+      "desc": "公關：作為社團對外窗口，與其他校內外社團、單位聯繫。<br>活動：負責籌辦課程與校外活動，並撰寫企劃書及辦理保險。<br>網管：經營社團之社群帳號，發布最新活動消息並排版。"
+    }
+  ],
+  "projects": [
+    {
+      "img": "https://img.youtube.com/vi/1PJWfEF07Fo/hqdefault.jpg",
+      "titleMain": "高中公民探究課程：",
+      "titleSub": "新店高中行人地獄改善",
+      "desc": "探討我的高中校外人行道的問題，採訪學校老師、民意代表以及政府單位並製作成新店異言堂，以行動推動問題改善，期望政府可改善這段道路，給予新店高中的學子更好的教學環境。",
+      "role": "導演、攝影、剪輯、受訪、對外聯絡",
+      "link": "https://www.youtube.com/watch?v=1PJWfEF07Fo",
+      "linkName": "成果展示（YouTube）"
+    }
+  ]
+}

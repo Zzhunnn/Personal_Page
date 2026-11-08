@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zhun's portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- 1. 引入外部 CSS 檔案 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- 2. 引入 jQuery 函式庫 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="site-title">zhun's portfolio</h1>
+      <nav aria-label="頁面導覽">
+        <a class="clickable" href="#profile">個人資訊</a>
+        <a class="clickable" href="#skills">技能展示</a>
+        <a class="clickable" href="#timeline">經歷時間軸</a>
+        <a class="clickable" href="#projects">專案作品集</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <aside id="profile" class="profile" aria-labelledby="name">
+        <div class="profile-left">
+          <!-- 圖片路徑請確保正確 -->
+          <img tabindex="0" loading="lazy" src="assets/handsome.png" alt="帥哥" class="lightbox-trigger" data-full="assets/handsome.png" data-lightbox-size="small" data-no-caption="true" style="cursor:pointer">
+          <div class="name-block">
+            <h2 id="name">李彥諄</h2>
+            <p class="en-name" lang="en" aria-label="English name">LEE, YAN-ZHUN</p>
+          </div>
+          <div class="contacts">
+            <a class="contact-email clickable" href="mailto:zzhun666@gmail.com?subject=聯絡合作" aria-label="Email">✉️Email</a>
+            <a class="contact-phone clickable" href="tel:+886979200305" aria-label="Phone">📞Phone</a>
+            <a class="clickable" href="https://github.com/Zzhunnn" target="_blank" rel="noopener">🌐GitHub</a>
+            <a class="clickable" href="https://www.instagram.com/_yzzzz.35/" target="_blank" rel="noopener">📸Instagram</a>
+          </div>
+        </div>
+      </aside>
+
+      <main style="flex:1">
+        <!-- 技能區塊 (等待 Ajax 填入) -->
+        <section id="skills">
+          <h3>技能展示</h3>
+          <div class="skills-list">
+            <div id="skills-container" class="tags" role="list" aria-label="技能標籤雲"></div>
+          </div>
+        </section>
+
+        <!-- 經歷時間軸區塊 (等待 Ajax 填入) -->
+        <section id="timeline">
+          <h3>經歷時間軸</h3>
+          <div id="timeline-container" class="timeline" role="list" aria-label="經歷時間軸" style="position:relative;padding-left:3.5rem;border-left:none;">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <!-- 動態資料將生成於此 -->
+          </div>
+        </section>
+
+        <!-- 專案區塊 (等待 Ajax 填入) -->
+        <section id="projects">
+          <h3>專案作品集</h3>
+          <div id="projects-container">
+            <!-- 動態資料將生成於此 -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- 3. 引入外部 JS 檔案 (必須放在 body 結尾前) -->
+  <script src="app.js"></script>
+</body>
+</html>

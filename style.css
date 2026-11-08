@@ -1,0 +1,160 @@
+:root{--accent:#3f4f9a;--accent-600:#2e3d79;--accent-soft:#6f83d1;--muted:#31394c;--card:linear-gradient(180deg,#f4f7ff 0%,#e9eefc 100%);--card-border:rgba(37,48,92,0.09)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans TC',sans-serif;margin:0;background:linear-gradient(180deg,#c8d6f8 0%, #e4eafc 60%);color:#0f1b2a}
+.container{max-width:900px;margin:24px auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.site-title{font-family:'Great Vibes', cursive;font-size:1.9rem;margin:0;color:var(--accent-600);line-height:1}
+nav a{color:var(--accent-600)}
+nav a{margin-left:12px;color:var(--muted);text-decoration:none}
+.hero{display:block}
+.profile{display:flex;justify-content:center;align-items:center;gap:40px;width:100%;background:var(--card);padding:14px;border-radius:12px;border:1px solid var(--card-border);box-shadow:0 8px 20px rgba(26,34,58,0.04);text-align:left}
+.profile img{width:120px;height:120px;border-radius:50%;object-fit:cover;transition:transform .28s ease,box-shadow .28s ease;outline-offset:4px}
+.profile img:hover,.profile img:focus{transform:scale(1.04);box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+.profile img:focus{box-shadow:0 0 0 3px rgba(43,108,176,0.12)}
+.profile-left{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.profile-left .name-block{text-align:center}
+.name-block h2{margin:0}
+.en-name{display:block;margin-top:0;color:var(--muted);font-size:0.95rem;letter-spacing:0.06em}
+.contacts{display:flex;flex-direction:row;gap:4px;align-items:center;margin:0}
+section{margin-top:14px}
+.skills-list{margin-bottom:10px}
+.skill{margin-bottom:14px}
+.bar{background:#e6eef8;border-radius:8px;height:10px;overflow:hidden}
+.bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#76bff0);transition:width 900ms ease}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:#fff;padding:6px 10px;border-radius:999px;border:1px solid #e6eef8;color:var(--muted);font-size:0.9rem}
+/* color variants for tags */
+.tag--blue{color:#5aa8ff;border-color:rgba(90,168,255,0.18)}
+.tag--green{color:#5ac896;border-color:rgba(90,200,150,0.12)}
+.tag--orange{color:#ffb77a;border-color:rgba(255,183,122,0.12)}
+/* 標籤雲：焦點與互動樣式 */
+.tag{transition:transform .16s ease,box-shadow .16s ease,color .12s}
+.tag:focus-visible{outline:0;box-shadow:0 10px 26px rgba(0,0,0,0.08);transform:translateY(-4px);color:var(--accent)}
+@media (prefers-reduced-motion:reduce){.tag{transition:none;transform:none}}
+.timeline{position:relative;padding-left:2rem}
+.timeline-line{position:absolute;left:1.75rem;top:0;bottom:0;width:0.1875rem;border-radius:0.125rem;overflow:hidden;background:transparent}
+.timeline-line::before{content:"";position:absolute;left:0;top:0;width:100%;height:200%;background:linear-gradient(180deg,#153a6b 0%, rgba(21,58,107,0.92) 18%, rgba(21,58,107,0.38) 48%, rgba(21,58,107,0.92) 78%, #153a6b 100%);background-repeat:repeat-y;transform:translateY(0);animation:timeline-flow 3.6s linear infinite}
+@keyframes timeline-flow{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+@media (prefers-reduced-motion:reduce){.timeline-line::before{animation:none}}
+/* timeline decorative dot */
+.timeline-dot{position:absolute;left:1.125rem;top:1.125rem;width:0.75rem;height:0.75rem;border-radius:50%;background:#153a6b;border:0.1875rem solid #fff;box-shadow:0 0 0 0.25rem rgba(21,58,107,0.16);animation:dot-pulse 2.4s ease-in-out infinite}
+@keyframes dot-pulse{0%{transform:scale(1);box-shadow:0 0 0 0.25rem rgba(31,78,138,0.12)}50%{transform:scale(1.08);box-shadow:0 0 0 10px rgba(31,78,138,0.09)}100%{transform:scale(1);box-shadow:0 0 0 0.25rem rgba(31,78,138,0.12)}}
+@media (prefers-reduced-motion:reduce){
+    .timeline-dot{animation:none}
+}
+/* 統一經歷時間軸每個項目的內距，避免單一項目因 inline style 而跑版 */
+#timeline .event{padding:0.875rem 0.75rem}
+.event{background:var(--card);padding:12px;border-radius:12px;margin-bottom:12px;border:1px solid var(--card-border);box-shadow:0 8px 20px rgba(26,34,58,0.04)}
+#skills, #timeline, #projects{margin-top:36px}
+#skills h3, #timeline h3, #projects h3{font-size:1.25rem;font-weight:600;margin-bottom:12px}
+.event{margin-bottom:1.25rem}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+/* 專案清單：縮圖左、文字右 的直欄樣式 */
+.projects-list .event{display:flex;gap:12px;align-items:flex-start;padding-left:0.75rem !important}
+.projects-list .media-img{width:240px;height:135px;object-fit:cover;border-radius:6px;border:1px solid #e6eef8;flex-shrink:0;transition:transform .28s ease,box-shadow .28s ease}
+.projects-list .media-img:hover{transform:scale(1.03);box-shadow:0 10px 26px rgba(0,0,0,0.09)}
+.projects-list .project-content{flex:1}
+.project-row{display:flex;gap:12px;align-items:flex-start}
+.project-title-main,.project-title-sub{display:inline}
+@media (max-width:600px){
+    .projects-list .event{flex-direction:column}
+    .project-row{flex-direction:column;align-items:center !important}
+    .projects-list .media-img{width:100%;height:10rem;order:1;display:block;margin:0 auto}
+    .projects-list .project-content{order:2;width:100%;text-align:left}
+    /* remove left padding from project wrappers (override inline styles) and center the cards themselves */
+    .projects-list, .projects-list .event{padding-left:0 !important;padding-right:0 !important}
+    .projects-list .event{margin-left:auto;margin-right:auto;max-width:640px;box-sizing:border-box}
+    .projects-list .project-row{justify-content:center !important}
+    /* keep titles block-level but preserve left text alignment */
+    .project-title-main,.project-title-sub{display:block;text-align:left}
+    .project-title-main.no-center, .project-title-sub.no-center{ text-align:left !important}
+}
+.card{background:var(--card);padding:10px;border-radius:10px;box-shadow:0 8px 26px rgba(8,14,30,0.06);border:1px solid var(--card-border);transition:transform .18s}
+.card:hover{transform:translateY(-6px)}
+
+/* clickable press animation for links/buttons */
+.clickable{display:inline-flex;align-items:center;gap:0.4rem;transition:transform .14s ease,box-shadow .14s ease}
+/* hover for pointer devices */
+.clickable:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 8px 22px rgba(0,0,0,0.08)}
+.clickable:focus-visible{outline:0;transform:translateY(-2px) scale(1.02);box-shadow:0 8px 22px rgba(0,0,0,0.10)}
+.clickable.pressed{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 26px rgba(0,0,0,0.10)}
+/* Contact buttons: single-color accent, softer style for 'soft modern' theme */
+.contacts .clickable{
+    background:linear-gradient(180deg,var(--accent-soft),#92a3ee);
+    color:#fff;
+    border-radius:999px;
+    padding:5px 8px;
+    min-width:48px;
+    justify-content:center;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.88rem;
+    box-shadow:0 5px 14px rgba(8,14,30,0.05);
+    border:1px solid rgba(255,255,255,0.06);
+    transition:background .18s ease,box-shadow .18s ease,transform .12s ease;
+}
+.contacts .clickable:hover{background:linear-gradient(180deg,#5f73c6,#7f8fe0);box-shadow:0 10px 26px rgba(8,14,30,0.08);transform:translateY(-2px)}
+.contacts .clickable:focus-visible{outline:0;box-shadow:0 0 0 3px rgba(111,131,209,0.16),0 10px 24px rgba(8,14,30,0.08)}
+@media (prefers-reduced-motion:reduce){.clickable,.clickable.pressed{transition:none;transform:none;box-shadow:none}}
+@media (max-width:600px){
+    .hero{display:block}
+    .projects{grid-template-columns:1fr}
+    .profile{flex-direction:column;align-items:center;gap:12px}
+    /* Mobile: arrange contacts as two rows of two buttons (2x2) */
+    .contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;align-items:center;margin-top:6px;width:100%;justify-items:center}
+    .contacts .clickable{width:100%;justify-content:center;padding:4px 6px}
+    .profile img{width:96px;height:96px}
+    header{align-items:flex-start}
+    nav{display:grid;grid-template-columns:repeat(2,auto);gap:6px;row-gap:4px;justify-items:end;max-width:220px}
+    nav a{margin-left:0;padding:4px 6px;text-align:right;font-size:0.95rem}
+}
+
+/* Lightbox / 放大檢視：覆蓋層、動畫與內容置中 */
+.lightbox-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);opacity:0;pointer-events:none;transition:opacity .28s ease;z-index:1200;padding:12px;box-sizing:border-box;overflow-x:hidden}
+.lightbox-overlay.open{opacity:1;pointer-events:auto}
+.lightbox-figure{max-width:92%;max-height:92%;display:flex;flex-direction:column;align-items:flex-end;gap:8px;transform:scale(.96);transition:transform .28s cubic-bezier(.2,.9,.3,1);box-sizing:border-box}
+.lightbox-overlay.open .lightbox-figure{transform:scale(1)}
+/* Size caps: limit displayed image so it won't feel overwhelmingly large */
+.lightbox-img{max-width:calc(min(90vw, 1100px));width:auto;height:auto;max-height:70vh;object-fit:contain;border-radius:8px;box-shadow:0 18px 48px rgba(0,0,0,0.5);display:block}
+/* smaller preset for certain images (avatar, poster) - use viewport-aware cap */
+.lightbox-overlay.small .lightbox-img{max-width:calc(min(90vw,480px));max-height:60vh}
+/* smaller cap on narrow screens; center figure to avoid horizontal overflow */
+@media (max-width:600px){
+    .lightbox-figure{align-items:center;padding:8px}
+    .lightbox-overlay.small .lightbox-img{max-width:90vw;max-height:60vh}
+    .lightbox-img{max-height:60vh}
+}
+.lightbox-close{background:rgba(255,255,255,0.96);border:0;padding:6px 10px;border-radius:6px;font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.lightbox-caption{color:#fff;font-size:0.95rem;margin-top:8px;max-width:90%;text-align:center}
+@media (prefers-reduced-motion:reduce){.lightbox-figure{transition:none}.lightbox-overlay{transition:none}}
+
+/* 桌面預設放大 (約 125%)：使用 zoom 為主，Firefox 使用 transform fallback */
+@media (min-width:900px){
+    html{zoom:1.25}
+    /* Firefox doesn't support zoom; use transform on body as fallback */
+    @supports (-moz-appearance: none){
+    body{transform:scale(1.25);transform-origin:0 0;width:calc(100% / 1.25)}
+    }
+}
+
+/* 手機版：讓專案卡片有明確邊界與間距，避免文字貼齊邊緣 */
+@media (max-width:600px){
+    .projects-list .event{
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    padding:12px !important;
+    box-shadow:0 6px 14px rgba(0,0,0,0.04);
+    margin-bottom:12px !important;
+    }
+    .projects-list .project-content{padding:8px 6px 0 6px;text-align:left}
+    .projects-list .media-img{border-radius:8px;overflow:hidden}
+}
+/* center only project titles inside projects-list on small screens, keep timeline items with .no-center left-aligned */
+@media (max-width:600px){
+    .projects-list .project-title-main,
+    .projects-list .project-title-sub{display:block;text-align:center}
+    .projects-list .project-title-main.no-center,
+    .projects-list .project-title-sub.no-center{ text-align:left !important}
+}
